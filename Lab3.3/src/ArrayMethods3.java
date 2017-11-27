@@ -4,12 +4,10 @@ public class ArrayMethods3
 
 	public static void main(String[] args)
 	{
-		int[] list = {4, 1, 7, 3, 0};
+		int[] list = {5, 1, 6, 2, 4, 3};
+		printArray(list);
 		insertionSort(list);
-		for (int i = 0; i < list.length; i++)
-		{
-			System.out.println(list[i]);
-		}
+		
 	}
 	
 	public static void insertionSort(int[] list1)
@@ -26,7 +24,9 @@ public class ArrayMethods3
 					{
 						swap(list1, index, j);
 						System.out.println("Swapping: " + list1[index] + " " + list1[j]);
+						printArray(list1);
 						index = j;
+						
 					}
 				}
 			}
@@ -40,7 +40,10 @@ public class ArrayMethods3
 	
 	public static void bubbleSort(String [] list1)
 	{
-		
+		for (int i = 0; i < list1.length; i++)
+		{
+			
+		}
 	}
 	
 	public static void swap(int[] arr, int i, int j)
@@ -48,5 +51,23 @@ public class ArrayMethods3
 		int temp = arr[i];
 		arr[i] = arr[j];
 		arr[j] = temp;
+	}
+	
+	public static void printArray(String[] arr)
+	{
+		for(int i = 0; i < arr.length; i++)
+		{
+			System.out.print("[" + arr[i] + "] ");
+		}
+		System.out.println();
+	}
+	
+	public static void printArray(int[] arr)
+	{
+		for(int i = 0; i < arr.length; i++)
+		{
+			System.out.print(arr[i] + " ");
+		}
+		System.out.println();
 	}
 }
